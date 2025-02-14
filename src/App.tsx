@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
 const course = ['Superman', 'Hulk', 'Thor', 'Spiderman'];
@@ -12,7 +10,7 @@ function App() {
     Number(localStorage.getItem('freez'))
   );
 
-  const options = (idx) => {
+  const options = (idx:any) => {
     localStorage.setItem('freez', idx);
     setselectedcoueseidx(idx);
   };
@@ -66,7 +64,7 @@ function Courses() {
     Number(localStorage.getItem('selectedcourseidx'))
   );
 
-  const handlingclick = (idx) => {
+  const handlingclick = (idx:any) => {
     localStorage.setItem('selectedcourseidx', idx);
     setselectrd(idx);
   };
